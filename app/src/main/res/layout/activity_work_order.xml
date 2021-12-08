@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkOrderActivity">
+
+    <ImageView
+        android:id="@+id/colonial_logo_main_menu"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/colonial" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="480dp"
+        android:layout_height="274dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="335dp" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="660dp"
+        tools:layout_editor_absoluteY="353dp" />
+
+    <EditText
+        android:id="@+id/editTextTime3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="668dp"
+        tools:layout_editor_absoluteY="473dp" />
+
+    <EditText
+        android:id="@+id/editTextTime4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="668dp"
+        tools:layout_editor_absoluteY="585dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="759dp"
+        android:layout_height="215dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="1662dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="481dp"
+        android:layout_height="894dp"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="640dp"
+        tools:layout_editor_absoluteY="728dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="547dp"
+        android:layout_height="809dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="778dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
