@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CLSM">
         <activity
+            android:name=".ExpandedInventoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".TimeSheetActivity"
             android:exported="false" />
         <activity
@@ -17,7 +20,7 @@
             android:exported="false" />
         <activity
             android:name=".InventoryActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
