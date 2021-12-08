@@ -50,7 +50,8 @@
             android:layout_height="wrap_content"
             android:text="@string/inventory_button_text"
             app:layout_column="1"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:onClick="switch_activity_inventory"/>
 
         <Button
             android:id="@+id/form_storage_button"
