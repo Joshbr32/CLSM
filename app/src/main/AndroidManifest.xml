@@ -13,9 +13,6 @@
             android:name=".FormStorageActivity"
             android:exported="false" />
         <activity
-            android:name=".ExpandedInventoryActivity"
-            android:exported="false" />
-        <activity
             android:name=".TimeSheetActivity"
             android:exported="false" />
         <activity
