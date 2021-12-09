@@ -6,9 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@id/toolbar2"
+        layout = "@layout/toolbar"/>
+
     <androidx.gridlayout.widget.GridLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="461dp"
+        android:layout_height="446dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="400dp"
         android:layout_marginEnd="50dp"
@@ -18,55 +22,54 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/timesheet_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="timesheet"
             android:text="@string/timesheet_button_text"
             app:layout_column="0"
-            app:layout_row="0"
-            android:onClick="timesheet"
-            />
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/worksheet_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="worksheet"
             android:text="@string/worksheet_button_text"
             app:layout_column="1"
-            app:layout_row="0"
-            android:onClick="worksheet"/>
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/workorder_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="workOrder"
             android:text="@string/workorder_button_text"
             app:layout_column="0"
-            app:layout_row="1"
-            android:onClick="workOrder"/>
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/inventory_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="inventory"
             android:text="@string/inventory_button_text"
             app:layout_column="1"
-            app:layout_row="1"
-            android:onClick="inventory"/>
+            app:layout_row="1" />
 
         <Button
             android:id="@+id/form_storage_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="formStorage"
             android:text="@string/formstorage_button_text"
-            tools:layout_editor_absoluteX="63dp"
-            tools:layout_editor_absoluteY="153dp"
             app:layout_column="0"
             app:layout_row="2"
-            android:onClick="formStorage"/>
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="153dp" />
 
 
     </androidx.gridlayout.widget.GridLayout>
@@ -84,53 +87,74 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
+        android:layout_width="477dp"
+        android:layout_height="169dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="725dp" />
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="846dp" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icons8_question_mark_24"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="725dp" />
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icons8_question_mark_24"
+            tools:layout_editor_absoluteX="124dp"
+            tools:layout_editor_absoluteY="873dp" />
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icons8_clipboard_24"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="727dp" />
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icons8_clipboard_24"
+            tools:layout_editor_absoluteX="190dp"
+            tools:layout_editor_absoluteY="873dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="23dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/icons8_home_24"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="877dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icons8_time_24"
+            tools:layout_editor_absoluteX="423dp"
+            tools:layout_editor_absoluteY="873dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="39dp"
+            android:layout_height="28dp"
+            app:srcCompat="@drawable/icons8_filing_cabinet_50"
+            tools:layout_editor_absoluteX="336dp"
+            tools:layout_editor_absoluteY="891dp" />
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="23dp"
+        android:layout_height="0dp"
         app:srcCompat="@drawable/icons8_home_24"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="727dp" />
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="877dp" />
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/icons8_time_24"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="726dp" />
+        tools:layout_editor_absoluteX="423dp"
+        tools:layout_editor_absoluteY="873dp" />
 
-    <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="39dp"
-        android:layout_height="28dp"
-        app:srcCompat="@drawable/icons8_filing_cabinet_50"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="735dp" />
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
