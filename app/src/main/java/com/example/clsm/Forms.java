@@ -2,7 +2,7 @@ package com.example.clsm;
 
 import java.util.ArrayList;
 
-public abstract class Forms {
+public class Forms {
     String type, date, mainIdentifier;
     ArrayList<String> dataList = new ArrayList<String>();
 
@@ -54,24 +54,3 @@ public abstract class Forms {
         return loadedDataList;
     }
 }
-/*
-class WorkOrder extends Forms {
-    String orderSite, orderDate, orderTimeIn, orderTimeOut, orderComment;
-    String[] orderCompletedTasks;
-
-    WorkOrder(String site, String date, String timeIn, String timeOut, String[] completedTasks, String comment) {
-
-        //orderSite = site;
-        //orderDate = date;
-
-        // Main Data \\
-        super("WorkOrder", date, site);
-
-        // Additional Data that goes into the dataList arrayList \\
-        orderTimeIn = timeIn;
-        orderTimeOut = timeOut;
-        orderCompletedTasks = completedTasks;
-        orderComment = comment;
-    }
-}
- */
