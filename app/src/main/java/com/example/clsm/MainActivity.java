@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     public void formStorage(View view) {
         Toast toast = Toast.makeText(MainActivity.this, "Opens up form storage",Toast.LENGTH_LONG);
         toast.show();
-        Intent intent= new Intent(this, TimeSheetActivity.class);
+        Intent intent= new Intent(this, FormStorageActivity.class);
         startActivity(intent);
     }
 }
