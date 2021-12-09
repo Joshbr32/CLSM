@@ -33,6 +33,8 @@ public class WorkOrderActivity extends AppCompatActivity {
     Spinner siteSpinner;
     EditText dateField, timeInField, timeOutField, commentsField;
     ListView taskList;
+    Bundle workOrderBundle;
+    ArrayList<WorkOrder> workOrders;
     WorkOrder workOrder;
 
     @Override

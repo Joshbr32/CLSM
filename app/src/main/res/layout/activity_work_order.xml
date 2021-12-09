@@ -46,7 +46,7 @@
         android:ems="10"
         android:inputType="time"
         android:minHeight="48dp"
-        android:text="@string/time_in"
+        android:text="@string/work_order_time_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/spinner"
@@ -60,7 +60,7 @@
         android:ems="10"
         android:inputType="time"
         android:minHeight="48dp"
-        android:text="@string/time_out"
+        android:text="@string/work_order_time_out"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/spinner"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime3" />
