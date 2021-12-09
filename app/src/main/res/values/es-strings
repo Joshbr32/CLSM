@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">CLSM</string>
+
+    <!-- Main Menu -->
+    <string name="timesheet_button_text">Hojas de horas</string>
+    <string name="worksheet_button_text">Hojas de trabajo</string>
+    <string name="workorder_button_text">órdenes de trabajo</string>
+    <string name="inventory_button_text">Inventario</string>
+    <string name="formstorage_button_text">Almacenamiento de formularios</string>
+    <string name="qoute_button_text">Citas</string>
+    <string name="time_clear">CLARO</string>
+    <string name="time_save">AHORRAR</string>
+    <string name="time_in">Tiempo en</string>
+    <string name="time_out">Se acabó el tiempo</string>
+    <string name="time_date">Fecha</string>
+    <string name="time_name">Nombre</string>
+
+
+
+
+
+</resources>
