@@ -30,11 +30,13 @@
         android:layout_marginStart="3dp"
         android:ems="10"
         android:inputType="date"
+        android:hint="mm/dd/yyyy"
         android:minHeight="48dp"
+        android:text="@string/date"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/colonial_logo_main_menu"
-        android:text="@string/date" />
+        app:layout_constraintTop_toBottomOf="@+id/colonial_logo_main_menu" />
 
     <EditText
         android:id="@+id/editTextTime3"
@@ -44,11 +46,11 @@
         android:ems="10"
         android:inputType="time"
         android:minHeight="48dp"
+        android:text="@string/time_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate2"
-        android:text="@string/time_in"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate2" />
 
     <EditText
         android:id="@+id/editTextTime4"
@@ -65,24 +67,24 @@
 
     <ListView
         android:id="@+id/taskList"
-        android:layout_width="398dp"
-        android:layout_height="174dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/commentsField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner"
-        app:layout_constraintVertical_bias="0.577" />
+        app:layout_constraintVertical_bias="0.577"
+        android:choiceMode="multipleChoice" />
 
     <EditText
         android:id="@+id/commentsField"
-        android:layout_width="395dp"
-        android:layout_height="178dp"
-        android:layout_marginTop="212dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/comments"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
-        android:text="@string/comments"/>
+        app:layout_constraintTop_toBottomOf="@+id/taskList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
