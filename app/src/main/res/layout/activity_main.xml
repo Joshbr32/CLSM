@@ -26,7 +26,9 @@
             android:layout_height="wrap_content"
             android:text="@string/timesheet_button_text"
             app:layout_column="0"
-            app:layout_row="0" />
+            app:layout_row="0"
+            android:onClick="timesheet"
+            />
 
         <Button
             android:id="@+id/worksheet_button"
@@ -34,7 +36,8 @@
             android:layout_height="wrap_content"
             android:text="@string/worksheet_button_text"
             app:layout_column="1"
-            app:layout_row="0" />
+            app:layout_row="0"
+            android:onClick="worksheet"/>
 
         <Button
             android:id="@+id/workorder_button"
@@ -42,7 +45,8 @@
             android:layout_height="wrap_content"
             android:text="@string/workorder_button_text"
             app:layout_column="0"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:onClick="workOrder"/>
 
         <Button
             android:id="@+id/inventory_button"
@@ -50,7 +54,8 @@
             android:layout_height="wrap_content"
             android:text="@string/inventory_button_text"
             app:layout_column="1"
-            app:layout_row="1" />
+            app:layout_row="1"
+            android:onClick="inventory"/>
 
         <Button
             android:id="@+id/form_storage_button"
@@ -60,27 +65,22 @@
             tools:layout_editor_absoluteX="63dp"
             tools:layout_editor_absoluteY="153dp"
             app:layout_column="0"
-            app:layout_row="2" />
+            app:layout_row="2"
+            android:onClick="formStorage"/>
 
-        <Button
-            android:id="@+id/quote_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/qoute_button_text"
-            />
+
     </androidx.gridlayout.widget.GridLayout>
 
     <ImageView
         android:id="@+id/colonial_logo_main_menu"
         android:layout_width="400dp"
         android:layout_height="200dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/colonial"
-        android:contentDescription="TODO" />
-
+        app:srcCompat="@drawable/colonial" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
