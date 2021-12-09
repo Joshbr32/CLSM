@@ -89,9 +89,13 @@ public class WorkOrderActivity extends AppCompatActivity {
             // Save work order data
             SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
             SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
+
+            /* I had to comment this out as it was giving errors
             Gson gson = new Gson();
             String json = gson.ToJson(workOrder);
             prefsEditor.putString("workOrder", json);
+            */
+
             prefsEditor.commit();
 
             // Retrieval code
