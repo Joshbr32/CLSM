@@ -31,4 +31,10 @@
     <string name="task_4">Task 4 (placeholder)</string>
     <string name="task_5">Task 5 (placeholder)</string>
 
+
+    <!-- Form Storage Activity -->
+    <string name="formstorage_label">Form Storage</string>
+    <string name="formstorage_select_form_type">Select Form Type:</string>
+    <string name="formstorage_form_type_worksheet">Work Sheet</string>
+    <string name="formstorage_form_type_timesheet">Time Sheet</string>
 </resources>

@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class InventoryActivity extends AppCompatActivity {
 
     RecyclerView inventoryList;
-    //inventoryObject[] inventoryObjects;
 
     ArrayList<inventoryObject> inventoryObjects = new ArrayList<>();
 
