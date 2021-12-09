@@ -32,4 +32,12 @@
         app:layout_constraintBottom_toTopOf="@+id/inventoryList"
         app:layout_constraintStart_toStartOf="@+id/inventoryList" />
 
+    <Button
+        android:id="@+id/add_object_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/add_item_button"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/inventoryList" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
