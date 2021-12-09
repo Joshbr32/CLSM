@@ -12,14 +12,20 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.SparseBooleanArray;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class WorkOrderActivity extends AppCompatActivity {
@@ -53,57 +59,40 @@ public class WorkOrderActivity extends AppCompatActivity {
         ArrayAdapter<String> taskAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, tasks);
         taskList.setAdapter(taskAdapter);
 
+        workOrder = new WorkOrder(dateField.getText().toString(), siteSpinner.getSelectedItem().toString());
+        workOrder.setContext(this);
     }
 
-    public class WorkOrder {
-        String orderSite, orderDate, orderTimeIn, orderTimeOut, orderComment;
-        String[] orderCompletedTasks;
-
-        WorkOrder(String site, String date, String timeIn, String timeOut, String[] completedTasks, String comment) {
-            orderSite = site;
-            orderDate = date;
-            orderTimeIn = timeIn;
-            orderTimeOut = timeOut;
-            orderCompletedTasks = completedTasks;
-            orderComment = comment;
+    public class WorkOrder extends Forms {
+        WorkOrder(String formDate, String mainID) {
+            super("workOrder", formDate, mainID);
         }
-
     }
 
     private class saveData extends AsyncTask<Void, Void, Void> {
-        String site, date, timeIn, timeOut, comment;
-        String[] completedTasks;
+        String completedTasks;
+        ArrayList<String> dataList;
 
         @Override
         protected Void doInBackground(Void... voids) {
-            site = siteSpinner.getSelectedItem().toString();
-            date = dateField.getText().toString();
-            timeIn = timeInField.getText().toString();
-            timeOut = timeOutField.getText().toString();
-            comment = commentsField.getText().toString();
+            // Get checked task items
+            completedTasks = "";
+            for (int i = 0; i < taskList.getCount(); i++) {
+                if (taskList.isItemChecked(i)) {
+                    completedTasks += taskList.getItemAtPosition(i).toString() + ";";
+                }
+            }
 
-            // get checked tasks from listview
+            // Update workOrder
+            workOrder.setDate(dateField.getText().toString());
+            dataList.add(timeInField.getText().toString());
+            dataList.add(timeOutField.getText().toString());
+            dataList.add(completedTasks);
+            dataList.add(commentsField.getText().toString());
+            workOrder.setDataList(dataList);
 
-            workOrder = new WorkOrder(site, date, timeIn, timeOut, completedTasks, comment);
-
-            // Save work order data
-            SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-            SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
-
-            /* I had to comment this out as it was giving errors
-            Gson gson = new Gson();
-            String json = gson.ToJson(workOrder);
-            prefsEditor.putString("workOrder", json);
-            */
-
-            prefsEditor.commit();
-
-            // Retrieval code
-            /*
-            Gson gson = new Gson();
-            String json = mPrefs.getString("workOrder", "");
-            MyObject obj = gson.fromJson(json, workOrder.class);
-            */
+            // Save data
+            workOrder.saveData();
 
             return null;
         }
