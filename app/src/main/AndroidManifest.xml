@@ -13,6 +13,8 @@
             android:name=".TimeSheetActivity"
             android:exported="false" />
         <activity
+            android:name=".TimePage" />
+        <activity
             android:name=".WorkSheetActivity"
             android:exported="false" />
         <activity

@@ -8,13 +8,13 @@
     <string name="inventory_button_text">Inventory</string>
     <string name="formstorage_button_text">Form Storage</string>
     <string name="qoute_button_text">Quotes</string>
-    <string name="time_clear">CLEAR</string>
+    <string name="time_clear">VIEW LOG</string>
     <string name="time_save">SAVE</string>
     <string name="time_in">Time In</string>
     <string name="time_out">Time Out</string>
     <string name="time_date">Date</string>
-    <string name="time_name">Name</string>
-
+    <string name="time_name">Employee Name</string>
+    <string name="time_supervisor">Supervisor Name</string>
 
 
 
