@@ -47,6 +47,7 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
             public void onClick(View view) {
                 tempInventoryObject.addCount();
                 holder.updateCount(tempInventoryObject);
+
             }
         });
         holder.sub.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +57,6 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
                 holder.updateCount(tempInventoryObject);
             }
         });
-
     }
 
     @Override
@@ -69,6 +69,7 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
         TextView object_name, object_count;
         ConstraintLayout inventoryLayout;
         Button add, sub;
+
 
         public InventoryViewHolder(@NonNull View itemView) {
             super(itemView);

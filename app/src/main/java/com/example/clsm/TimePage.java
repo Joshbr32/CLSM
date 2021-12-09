@@ -15,26 +15,6 @@ public class TimePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_page);
-        TextView n1,t1,t2,d1,s1;
-        n1 = findViewById(R.id.time_name2);
-        t1 = findViewById(R.id.time_in2);
-        t2 = findViewById(R.id.time_out2);
-        d1 = findViewById(R.id.time_date2);
-        s1 = findViewById(R.id.time_supervisor2);
-
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("preference", Context.MODE_PRIVATE);
-
-        String supervisor = sharedPreferences.getString("supervisor name", "");
-        String name = sharedPreferences.getString("name", "");
-        String timeIn = sharedPreferences.getString("time in","");
-        String timeOut = sharedPreferences.getString("time out","");
-        String date = sharedPreferences.getString("date","");
-
-        n1.setText(name);
-        t1.setText(timeIn);
-        t2.setText(timeOut);
-        d1.setText(date);
-        s1.setText(supervisor);
 
     }
 
@@ -58,11 +38,12 @@ class TimeSheet extends Forms{
     void createDataList(){
         /*
         Order:
-            Supervisor
+            Type
             Name
+            Date
+            Supervisor
             TimeIn
             TimeOut
-            Date
          */
         ArrayList<String> dl = new ArrayList<>();
         dl.add(type);
