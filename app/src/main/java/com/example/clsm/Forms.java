@@ -51,6 +51,10 @@ public class Forms {
         return dataList.get(dataPosition);
     }
 
+    public void setDataSection(String newData, int dataPosition){
+        dataList.set(dataPosition, newData);
+    }
+
     public ArrayList<String> loadData(){
         ArrayList<String> loadedDataList = new ArrayList<String>();
 
