@@ -1,18 +1,7 @@
 package com.example.clsm;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,12 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
-import com.google.gson.Gson;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 
 public class WorkOrderActivity extends AppCompatActivity {
@@ -36,6 +25,7 @@ public class WorkOrderActivity extends AppCompatActivity {
     Bundle workOrderBundle;
     ArrayList<WorkOrder> workOrders;
     WorkOrder workOrder;
+    Button saveButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,21 +36,30 @@ public class WorkOrderActivity extends AppCompatActivity {
         dateField = findViewById(R.id.editTextDate2);
         timeInField = findViewById(R.id.editTextTime3);
         timeOutField = findViewById(R.id.editTextTime4);
-        commentsField = findViewById((R.id.commentsField));
+        commentsField = findViewById(R.id.commentsField);
         taskList = findViewById(R.id.taskList);
+        saveButton = findViewById(R.id.saveButton);
 
         // Populate site spinner
-        String[] sites = new String[]{"@string/site_1", "@string/site_2", "@string/site_3", "@string/site_4", "@string/site_5"};
+        String[] sites = new String[]{getResources().getString(R.string.site_1), getResources().getString(R.string.site_2), getResources().getString(R.string.site_3), getResources().getString(R.string.site_4), getResources().getString(R.string.site_5)};
         ArrayAdapter<String> siteAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, sites);
         siteSpinner.setAdapter(siteAdapter);
 
         // Populate task listView
-        String[] tasks = new String[]{"@string/task_1", "@string/task_2", "@string/task_3", "@string/task_4", "@string/task_5"};
+        String[] tasks = new String[]{getResources().getString(R.string.task_1), getResources().getString(R.string.task_2), getResources().getString(R.string.task_3), getResources().getString(R.string.task_4), getResources().getString(R.string.task_5)};
         ArrayAdapter<String> taskAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, tasks);
         taskList.setAdapter(taskAdapter);
 
         workOrder = new WorkOrder(dateField.getText().toString(), siteSpinner.getSelectedItem().toString());
         workOrder.setContext(this);
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SaveData sd = new SaveData();
+                sd.execute();
+            }
+        });
     }
 
     public class WorkOrder extends Forms {
@@ -69,7 +68,7 @@ public class WorkOrderActivity extends AppCompatActivity {
         }
     }
 
-    private class saveData extends AsyncTask<Void, Void, Void> {
+    private class SaveData extends AsyncTask<Void, Void, Void> {
         String completedTasks;
         ArrayList<String> dataList;
 
@@ -84,6 +83,9 @@ public class WorkOrderActivity extends AppCompatActivity {
             }
 
             // Update workOrder
+            dataList = new ArrayList<String>();
+
+            workOrder.setMainIdentifier(siteSpinner.getSelectedItem().toString());
             workOrder.setDate(dateField.getText().toString());
             dataList.add(timeInField.getText().toString());
             dataList.add(timeOutField.getText().toString());

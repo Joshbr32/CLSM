@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class Forms {
@@ -18,9 +20,7 @@ public class Forms {
         mainIdentifier = mainID;
     }
 
-    public void setContext(Context newContext) {
-        context = newContext;
-    }
+    public void setContext(Context newContext) { context = newContext; }
 
     public void setType(String newType){
         type = newType;
@@ -79,8 +79,9 @@ public class Forms {
         SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
 
         Gson gson = new Gson();
-        String json = sharedPreferences.getString(mainIdentifier, "");
-        dataList = gson.fromJson(json, dataList.getClass());
+        String json = sharedPreferences.getString(mainIdentifier, null);
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        dataList = gson.fromJson(json, type);
 
         return loadedDataList;
     }
