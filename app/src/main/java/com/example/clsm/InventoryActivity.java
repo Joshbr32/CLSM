@@ -1,21 +1,22 @@
 package com.example.clsm;
 
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 
 public class InventoryActivity extends AppCompatActivity {
 
     RecyclerView inventoryList;
-
+    InventoryAdapter inventoryAdapter;
     ArrayList<inventoryObject> inventoryObjects = new ArrayList<>();
 
 
-    public class inventoryObject extends Forms{
+    public static class inventoryObject extends Forms{
         String object_description;
         int object_count;
 
@@ -82,9 +83,15 @@ public class InventoryActivity extends AppCompatActivity {
 
         tempWriteArrayList();
 
-        InventoryAdapter inventoryAdapter = new InventoryAdapter(this, inventoryObjects);
+        inventoryAdapter = new InventoryAdapter(this, inventoryObjects);
 
         inventoryList.setAdapter(inventoryAdapter);
         inventoryList.setLayoutManager(new LinearLayoutManager(this));
+
+    }
+
+    public void createItem(View view) {
+        inventoryObjects.add(new inventoryObject("Object A", 0, "Test Desc"));
+        inventoryAdapter.notifyDataSetChanged();
     }
 }

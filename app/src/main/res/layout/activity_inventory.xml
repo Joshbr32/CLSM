@@ -38,6 +38,7 @@
         android:layout_height="50dp"
         android:text="@string/inventory_add_item_button"
         app:layout_constraintBottom_toBottomOf="@+id/form_storage_label"
-        app:layout_constraintEnd_toEndOf="@+id/inventoryList" />
+        app:layout_constraintEnd_toEndOf="@+id/inventoryList"
+        android:onClick="createItem"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,11 +58,12 @@ class TimeSheet extends Forms{
     void createDataList(){
         /*
         Order:
-            Supervisor
+            Type
             Name
+            Date
+            Supervisor
             TimeIn
             TimeOut
-            Date
          */
         ArrayList<String> dl = new ArrayList<>();
         dl.add(type);

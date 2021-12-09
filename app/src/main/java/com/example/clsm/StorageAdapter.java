@@ -42,13 +42,6 @@ public class StorageAdapter extends RecyclerView.Adapter<StorageAdapter.StorageV
         boolean ts = true;
         boolean ws = true;
 
-
-        /*
-
-
-
-         */
-
     }
 
     @Override
