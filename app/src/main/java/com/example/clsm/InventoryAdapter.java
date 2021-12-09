@@ -79,8 +79,9 @@ public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.Inve
                 add = inventoryLayout.findViewById(R.id.add_object_count);
                 sub = inventoryLayout.findViewById(R.id.sub_object_count);
         }
+
         public void setObject_name(InventoryActivity.inventoryObject invObject){
-            object_name.setText(invObject.getObjectName());
+            object_name.setText(invObject.getMainIdentifier());
         }
 
         public void updateCount(InventoryActivity.inventoryObject invObject){

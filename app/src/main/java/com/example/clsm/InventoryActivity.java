@@ -15,13 +15,24 @@ public class InventoryActivity extends AppCompatActivity {
     ArrayList<inventoryObject> inventoryObjects = new ArrayList<>();
 
 
-    public class inventoryObject {
-        String object_name, object_description;
+    public class inventoryObject extends Forms{
+        String object_description;
         int object_count;
 
+        /*
+        Data List Order:
+            Type
+            Name
+            Count
+            Description
+         */
+
         inventoryObject(String obj_name, int obj_count, String obj_desc){
-            object_name = obj_name;
+            super("InventoryItem", "null", obj_name);
+
+            // Additional Data \\
             object_count = obj_count;
+            object_description = obj_desc;
         }
 
         void addCount(){
@@ -34,22 +45,20 @@ public class InventoryActivity extends AppCompatActivity {
             }
         }
 
-        public String getObjectName(){
-            return object_name;
-        }
-
         public String getObjectCount(){
             return String.valueOf(object_count);
         }
 
+        void createDataList(){
+            ArrayList<String> dl = new ArrayList<>();
 
-    }
+            dl.add(type);
+            dl.add(mainIdentifier);
+            dl.add(String.valueOf(object_count));
+            dl.add(object_description);
 
-    protected void readInventoryData(){
-
-    }
-
-    protected void writeInventoryData(){
+            setDataList(dl);
+        }
 
     }
 

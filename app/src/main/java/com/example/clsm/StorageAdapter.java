@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,77 +14,77 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-public class StorageAdapter extends RecyclerView.Adapter<StorageAdapter.InventoryViewHolder>{
+public class StorageAdapter extends RecyclerView.Adapter<StorageAdapter.StorageViewHolder>{
 
     Context context;
-    ArrayList<InventoryActivity.inventoryObject>inventoryObjects;
+    ArrayList<Forms> forms;
 
 
-    public StorageAdapter(InventoryActivity ct, ArrayList<InventoryActivity.inventoryObject> invObjects) {
+    public StorageAdapter(FormStorageActivity ct, ArrayList<Forms> storageObj) {
         context = ct;
-        inventoryObjects = invObjects;
+        forms = storageObj;
     }
 
 
     @NonNull
     @Override
-    public InventoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public StorageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.inventory_row, parent, false);
-        return new InventoryViewHolder(view);
+        View view = inflater.inflate(R.layout.storage_row, parent, false);
+        return new StorageViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull InventoryViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull StorageViewHolder holder, int position) {
 
-        InventoryActivity.inventoryObject tempInventoryObject = inventoryObjects.get(position);
+        Forms tempForm = forms.get(position);
+        holder.setFormDataLabels(tempForm);
+        boolean ts = true;
+        boolean ws = true;
 
-        holder.setObject_name(tempInventoryObject);
-        holder.updateCount(tempInventoryObject);
-
-        holder.add.setOnClickListener(new View.OnClickListener() {
+        holder.showTimesheets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tempInventoryObject.addCount();
-                holder.updateCount(tempInventoryObject);
+
             }
         });
-        holder.sub.setOnClickListener(new View.OnClickListener() {
+        holder.showWorksheets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tempInventoryObject.subCount();
-                holder.updateCount(tempInventoryObject);
+
             }
         });
-
     }
 
     @Override
     public int getItemCount() {
-            return inventoryObjects.size();
+        return forms.size();
     }
 
-    public class InventoryViewHolder extends RecyclerView.ViewHolder{
+    public class StorageViewHolder extends RecyclerView.ViewHolder{
 
-        TextView object_name, object_count;
-        ConstraintLayout inventoryLayout;
-        Button add, sub;
+        TextView storage_form_type, storage_form_main_identifier, storage_form_date;
+        ConstraintLayout storageLayout;
+        CheckBox showTimesheets, showWorksheets;
 
-        public InventoryViewHolder(@NonNull View itemView) {
+        public StorageViewHolder(@NonNull View itemView) {
             super(itemView);
-                object_name = itemView.findViewById(R.id.storage_form_type);
-                object_count = itemView.findViewById(R.id.inventory_object_count);
 
-                inventoryLayout = itemView.findViewById(R.id.inventoryLayout);
-                add = inventoryLayout.findViewById(R.id.add_object_count);
-                sub = inventoryLayout.findViewById(R.id.sub_object_count);
-        }
-        public void setObject_name(InventoryActivity.inventoryObject invObject){
-            object_name.setText(invObject.getObjectName());
+            storage_form_type = itemView.findViewById(R.id.storage_form_type);
+            storage_form_main_identifier = itemView.findViewById(R.id.storage_form_main_identifier);
+            storage_form_date = itemView.findViewById(R.id.storage_form_date);
+
+            storageLayout = itemView.findViewById(R.id.storageLayout);
+
+            showTimesheets = itemView.findViewById(R.id.formstorage_form_type_timesheet_button);
+            showWorksheets = itemView.findViewById(R.id.formstorage_form_type_worksheet_button);
         }
 
-        public void updateCount(InventoryActivity.inventoryObject invObject){
-            object_count.setText(invObject.getObjectCount());
+        public void setFormDataLabels(Forms form){
+            storage_form_type.setText(form.getType());
+            storage_form_main_identifier.setText(form.getMainIdentifier());
+            storage_form_date.setText(form.getDate());
+
         }
     }
 

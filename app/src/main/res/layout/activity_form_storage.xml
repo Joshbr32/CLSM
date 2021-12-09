@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:text="@string/formstorage_form_type_worksheet"
-        app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/formsList"
         app:layout_constraintStart_toEndOf="@+id/formstorage_form_type_timesheet_button"
         app:layout_constraintTop_toTopOf="@+id/formstorage_form_type_timesheet_button" />
 
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="@+id/form_storage_form_type_label" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/formsList"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"
