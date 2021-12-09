@@ -42,18 +42,13 @@ public class StorageAdapter extends RecyclerView.Adapter<StorageAdapter.StorageV
         boolean ts = true;
         boolean ws = true;
 
-        holder.showTimesheets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
-        holder.showWorksheets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        /*
 
-            }
-        });
+
+
+         */
+
     }
 
     @Override
