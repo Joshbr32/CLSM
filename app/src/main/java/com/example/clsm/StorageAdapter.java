@@ -14,13 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-public class InventoryAdapter extends RecyclerView.Adapter<InventoryAdapter.InventoryViewHolder>{
+public class StorageAdapter extends RecyclerView.Adapter<StorageAdapter.InventoryViewHolder>{
 
     Context context;
     ArrayList<InventoryActivity.inventoryObject>inventoryObjects;
 
 
-    public InventoryAdapter(InventoryActivity ct, ArrayList<InventoryActivity.inventoryObject> invObjects) {
+    public StorageAdapter(InventoryActivity ct, ArrayList<InventoryActivity.inventoryObject> invObjects) {
         context = ct;
         inventoryObjects = invObjects;
     }

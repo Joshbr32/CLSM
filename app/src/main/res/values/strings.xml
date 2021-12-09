@@ -27,4 +27,10 @@
     <string name="inventory_label">Inventory List</string>
     <string name="add_item_button">Add Item</string>
 
+
+    <!-- Form Storage Activity -->
+    <string name="formstorage_label">Form Storage</string>
+    <string name="formstorage_select_form_type">Select Form Type:</string>
+    <string name="formstorage_form_type_worksheet">Work Sheet</string>
+    <string name="formstorage_form_type_timesheet">Time Sheet</string>
 </resources>

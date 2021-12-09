@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CLSM">
         <activity
+            android:name=".FormStorageActivity"
+            android:exported="false" />
+        <activity
             android:name=".ExpandedInventoryActivity"
             android:exported="false" />
         <activity
