@@ -37,6 +37,8 @@ public class TimeSheetActivity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                // create new TimeSheet from class
                 n1 = name.getText().toString();
                 t1 = timeIn.getText().toString();
                 t2 = timeOut.getText().toString();

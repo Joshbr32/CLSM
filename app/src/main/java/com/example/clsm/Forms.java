@@ -15,6 +15,7 @@ public class Forms {
     public void setType(String newType){
         type = newType;
     }
+
     public String getType(){
         return type;
     }

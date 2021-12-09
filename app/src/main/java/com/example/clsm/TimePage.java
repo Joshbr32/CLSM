@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class TimePage extends AppCompatActivity {
 
     @Override
@@ -20,7 +22,8 @@ public class TimePage extends AppCompatActivity {
         d1 = findViewById(R.id.time_date2);
         s1 = findViewById(R.id.time_supervisor2);
 
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("preference", Context.MODE_PRIVATE);
+
         String supervisor = sharedPreferences.getString("supervisor name", "");
         String name = sharedPreferences.getString("name", "");
         String timeIn = sharedPreferences.getString("time in","");
@@ -37,3 +40,38 @@ public class TimePage extends AppCompatActivity {
 
 }
 
+class TimeSheet extends Forms{
+
+    // Main identifier is Name
+
+    // Addtional Data
+    String timeIn, timeOut, supervisor;
+
+
+    TimeSheet(String n1, String t1, String t2, String d1, String s1){
+        super("TimeSheet", "d1", "n1");
+        timeIn = t1;
+        timeOut = t2;
+        supervisor = s1;
+    }
+
+    void createDataList(){
+        /*
+        Order:
+            Supervisor
+            Name
+            TimeIn
+            TimeOut
+            Date
+         */
+        ArrayList<String> dl = new ArrayList<>();
+        dl.add(type);
+        dl.add(supervisor);
+        dl.add(mainIdentifier);
+        dl.add(timeIn);
+        dl.add(timeOut);
+        dl.add(date);
+
+        setDataList(dl);
+    }
+}
