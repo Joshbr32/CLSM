@@ -25,5 +25,6 @@
     </string-array>
 
     <string name="inventory_label">Inventory List</string>
+    <string name="add_item_button">Add Item</string>
 
 </resources>
