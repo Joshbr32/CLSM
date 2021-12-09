@@ -18,5 +18,26 @@
 
 
 
+    <!-- Work Order -->
+    <string name="site_list">List of sites</string>
+    <string name="date">Date</string>
+    <string name="time_in">Time in</string>
+    <string name="time_out">Time out</string>
+    <string name="comments">Additional comments</string>
+    <string name="save">Save</string>
+
+    <!-- Sites -->
+    <string name="site_1">Site 1 (placeholder)</string>
+    <string name="site_2">Site 2 (placeholder)</string>
+    <string name="site_3">Site 3 (placeholder)</string>
+    <string name="site_4">Site 4 (placeholder)</string>
+    <string name="site_5">Site 5 (placeholder)</string>
+
+    <!-- Tasks -->
+    <string name="task_1">Task 1 (placeholder)</string>
+    <string name="task_2">Task 2 (placeholder)</string>
+    <string name="task_3">Task 3 (placeholder)</string>
+    <string name="task_4">Task 4 (placeholder)</string>
+    <string name="task_5">Task 5 (placeholder)</string>
 
 </resources>
