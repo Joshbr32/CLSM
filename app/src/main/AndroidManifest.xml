@@ -24,6 +24,9 @@
             android:name=".WorkSheetActivity"
             android:exported="false" />
         <activity
+            android:name=".WorkOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".InventoryActivity"
             android:exported="true" />
         <activity

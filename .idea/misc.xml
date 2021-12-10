@@ -3,20 +3,44 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/activity_time_sheet.xml" value="0.22" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/activity_form_storage.xml" value="0.3390625" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/activity_inventory.xml" value="0.3390625" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/activity_time_sheet.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/activity_work_order.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/inventory_row.xml" value="0.3390625" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-large/storage_row.xml" value="0.5" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-normal/activity_form_storage.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-normal/activity_inventory.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-normal/activity_main.xml" value="0.22604166666666667" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-normal/activity_time_sheet.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-normal/activity_work_order.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-normal/inventory_row.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-normal/storage_row.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-small/activity_form_storage.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-small/activity_inventory.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-small/activity_main.xml" value="0.22604166666666667" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-small/activity_time_sheet.xml" value="0.22" />
-        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/activity_time_sheet.xml" value="0.22" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-small/activity_work_order.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-small/inventory_row.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-small/storage_row.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/activity_form_storage.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/activity_inventory.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/activity_time_sheet.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/activity_work_order.xml" value="0.22" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/inventory_row.xml" value="0.15789473684210525" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout-xlarge/storage_row.xml" value="0.15789473684210525" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_expanded_inventory.xml" value="0.29528985507246375" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_form_storage.xml" value="0.29528985507246375" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_inventory.xml" value="0.2246376811594203" />
-        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_main.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_time_page.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_time_sheet.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_work_order.xml" value="0.2246376811594203" />
-        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_work_sheet.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_work_order.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/activity_work_sheet.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/inventory_row.xml" value="0.29528985507246375" />
-        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/storage_row.xml" value="0.29528985507246375" />
+        <entry key="..\:/Users/Jason Yan/Documents/GitHub/CLSM/app/src/main/res/layout/storage_row.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Joshb/AndroidStudioProjects/CLSM/app/src/main/res/layout/activity_inventory.xml" value="0.575" />
         <entry key="..\:/Users/Joshb/AndroidStudioProjects/CLSM/app/src/main/res/layout/activity_main.xml" value="0.575" />
         <entry key="..\:/Users/Joshb/AndroidStudioProjects/CLSM/app/src/main/res/layout/activity_work_sheet.xml" value="0.575" />

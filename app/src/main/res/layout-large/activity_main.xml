@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/colonial_logo_main_menu"
+        android:layout_width="471dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="52dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/colonial" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="657dp"
+        android:layout_height="66dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="-26dp"
+        tools:layout_editor_absoluteY="833dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/icons8_question_mark_24"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="842dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="65dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/icons8_home_24"
+        tools:layout_editor_absoluteX="257dp"
+        tools:layout_editor_absoluteY="841dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/icons8_clipboard_24"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="841dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/icons8_time_24"
+        tools:layout_editor_absoluteX="478dp"
+        tools:layout_editor_absoluteY="839dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="53dp"
+        android:layout_height="39dp"
+        app:srcCompat="@drawable/icons8_filing_cabinet_50"
+        tools:layout_editor_absoluteX="379dp"
+        tools:layout_editor_absoluteY="842dp" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/timesheet_button"
+            android:layout_width="227dp"
+            android:layout_height="115dp"
+            android:onClick="timesheet"
+            android:text="@string/timesheet_button_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/workorder_button"
+            android:layout_width="251dp"
+            android:layout_height="116dp"
+            android:onClick="workOrder"
+            android:text="@string/workorder_button_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/inventory_button"
+            android:layout_width="226dp"
+            android:layout_height="89dp"
+            android:onClick="inventory"
+            android:text="@string/inventory_button_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/form_storage_button"
+            android:layout_width="254dp"
+            android:layout_height="92dp"
+            android:onClick="formStorage"
+            android:text="@string/formstorage_button_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_column="2"
+            app:layout_row="1"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="153dp" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

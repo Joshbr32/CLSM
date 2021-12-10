@@ -26,14 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="713dp"
-        android:layout_marginEnd="232dp"
         android:layout_marginBottom="90dp"
         android:text="@string/time_clear"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/time_save"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/colonial_logo2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/TimeOut1"
@@ -167,10 +167,11 @@
         android:id="@+id/time_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="464dp"
         android:onClick="saveForm"
         android:text="@string/time_save"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="713dp" />
+        app:layout_constraintTop_toBottomOf="@+id/colonial_logo2"
+        tools:layout_editor_absoluteX="225dp" />
 
     <EditText
         android:id="@+id/timeSupervisor1"
