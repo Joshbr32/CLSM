@@ -2,6 +2,7 @@ package com.example.clsm;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -63,26 +64,55 @@ public class Forms {
     }
 
     public void saveData(){
-        SharedPreferences sharedPreferences = context.getSharedPreferences("shared preferences", context.MODE_PRIVATE);
-        SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
+        if (mainIdentifier != null && date != null && context != null) {
+            SharedPreferences sharedPreferences = context.getSharedPreferences("shared preferences", context.MODE_PRIVATE);
+            SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
 
-        Gson gson = new Gson();
-        String json = gson.toJson(dataList);
-        prefsEditor.putString(mainIdentifier, json);
-        prefsEditor.commit();
+            Gson gson = new Gson();
+            String json = gson.toJson(dataList);
+            prefsEditor.putString(mainIdentifier + ";" + date, json);
+            prefsEditor.commit();
+
+            updateKeys(mainIdentifier + ";" + date);
+        }
     }
 
     public ArrayList<String> loadData(){
-        ArrayList<String> loadedDataList = new ArrayList<String>();
+        dataList = new ArrayList<String>();
+        if (context != null) {
+            SharedPreferences sharedPreferences = context.getSharedPreferences("shared preferences", context.MODE_PRIVATE);
+            SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
+
+            Gson gson = new Gson();
+            String json = sharedPreferences.getString(mainIdentifier + ";" + date, null);
+            Type type = new TypeToken<ArrayList<String>>() {
+            }.getType();
+            dataList = gson.fromJson(json, type);
+        }
+        return dataList;
+    }
+
+    public void updateKeys(String key) {
+        ArrayList<String> keyList;
 
         SharedPreferences sharedPreferences = context.getSharedPreferences("shared preferences", context.MODE_PRIVATE);
         SharedPreferences.Editor prefsEditor = sharedPreferences.edit();
 
         Gson gson = new Gson();
-        String json = sharedPreferences.getString(mainIdentifier, null);
+        String json = sharedPreferences.getString("keyList", null);
         Type type = new TypeToken<ArrayList<String>>() {}.getType();
-        dataList = gson.fromJson(json, type);
+        keyList = gson.fromJson(json, type);
 
-        return loadedDataList;
+        if (keyList == null) {
+            keyList = new ArrayList<String>();
+            Log.i("Forms", "null list");
+        }
+        if (!keyList.contains(key)) {
+            keyList.add(key);
+            json = gson.toJson(keyList);
+            prefsEditor.putString("keyList", json);
+            prefsEditor.commit();
+            Log.i("Forms", "put key " + key);
+        }
     }
 }

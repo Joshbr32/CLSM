@@ -64,7 +64,7 @@ public class WorkOrderActivity extends AppCompatActivity {
 
     public class WorkOrder extends Forms {
         WorkOrder(String formDate, String mainID) {
-            super("workOrder", formDate, mainID);
+            super("WorkSheet", formDate, mainID);
         }
     }
 
@@ -87,6 +87,7 @@ public class WorkOrderActivity extends AppCompatActivity {
 
             workOrder.setMainIdentifier(siteSpinner.getSelectedItem().toString());
             workOrder.setDate(dateField.getText().toString());
+            dataList.add("workOrder");
             dataList.add(timeInField.getText().toString());
             dataList.add(timeOutField.getText().toString());
             dataList.add(completedTasks);
