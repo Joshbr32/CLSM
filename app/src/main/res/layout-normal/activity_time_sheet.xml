@@ -9,93 +9,93 @@
 
     <ImageView
         android:id="@+id/colonial_logo2"
-        android:layout_width="255dp"
-        android:layout_height="128dp"
+        android:layout_width="210dp"
+        android:layout_height="100dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="87dp"
         android:layout_marginEnd="101dp"
-        android:layout_marginBottom="544dp"
+        android:layout_marginBottom="455dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/colonial" />
 
     <Button
         android:id="@+id/time_clear"
-        android:layout_width="121dp"
-        android:layout_height="71dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="713dp"
-        android:layout_marginEnd="232dp"
         android:layout_marginBottom="16dp"
         android:text="@string/time_clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/time_save"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <EditText
+        android:id="@+id/TimeOut1"
+        android:layout_width="221dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="546dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/TimeOut1"
-        android:layout_width="219dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="546dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.173" />
 
     <EditText
         android:id="@+id/TimeDate1"
-        android:layout_width="221dp"
-        android:layout_height="66dp"
+        android:layout_width="222dp"
+        android:layout_height="67dp"
         android:layout_marginStart="159dp"
         android:layout_marginTop="347dp"
         android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="mm/dd/yyyy"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.071" />
 
     <EditText
         android:id="@+id/TimeName1"
-        android:layout_width="224dp"
-        android:layout_height="62dp"
+        android:layout_width="223dp"
+        android:layout_height="59dp"
         android:layout_marginStart="157dp"
         android:layout_marginTop="288dp"
         android:layout_marginEnd="13dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintVertical_bias="0.047" />
 
     <EditText
         android:id="@+id/TimeIn1"
         android:layout_width="214dp"
-        android:layout_height="59dp"
+        android:layout_height="63dp"
         android:layout_marginStart="165dp"
         android:layout_marginTop="480dp"
         android:layout_marginEnd="21dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,115 +103,109 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <TextView
         android:id="@+id/time_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
+        android:layout_width="143dp"
+        android:layout_height="51dp"
         android:layout_marginTop="314dp"
-        android:layout_marginEnd="267dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/time_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TimeName1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/time_date"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <TextView
         android:id="@+id/time_in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
+        android:layout_width="146dp"
+        android:layout_height="74dp"
         android:layout_marginTop="508dp"
         android:layout_marginEnd="336dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/time_sheet_time_in"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/time_out"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/time_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
+        android:layout_width="145dp"
+        android:layout_height="63dp"
         android:layout_marginTop="369dp"
-        android:layout_marginEnd="341dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/time_date"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.611"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
-
-    <TextView
-        android:id="@+id/time_out"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="581dp"
-        android:layout_marginEnd="312dp"
-        android:text="@string/time_sheet_time_out"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TimeDate1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/time_supervisor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/time_save"
-        android:layout_width="131dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="221dp"
-        android:layout_marginTop="713dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="saveForm"
-        android:text="@string/time_save"
+    <TextView
+        android:id="@+id/time_out"
+        android:layout_width="148dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="581dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/time_sheet_time_out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987" />
+        app:layout_constraintVertical_bias="0.005" />
+
+    <Button
+        android:id="@+id/time_save"
+        android:layout_width="95dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="239dp"
+        android:layout_marginTop="667dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="saveForm"
+        android:text="@string/time_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/timeSupervisor1"
-        android:layout_width="218dp"
-        android:layout_height="59dp"
+        android:layout_width="220dp"
+        android:layout_height="66dp"
         android:layout_marginStart="161dp"
         android:layout_marginTop="411dp"
         android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.101" />
 
     <TextView
         android:id="@+id/time_supervisor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="65dp"
         android:layout_marginTop="438dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/time_supervisor"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timeSupervisor1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="29dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
