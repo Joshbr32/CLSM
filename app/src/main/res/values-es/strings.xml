@@ -51,9 +51,9 @@
     <!-- Inventory -->
     <string name="inventory_label">Lista de inventario</string>
     <string name="inventory_add_item_button">Añadir artículo</string>
-
-    <!-- add_new_item -->
-    <string name= "new_item_box"></string>
-    <string name= "item_description"></string>
+    <string name="new_item_description">Item Description:</string>
+    <string name="new_item_count">Item Count:</string>
+    <string name="new_item_label">Add New Item</string>
+    <string name="new_item_name">Item Name:</string>
 
 </resources>

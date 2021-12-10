@@ -27,11 +27,11 @@
         android:text="@string/formstorage_select_form_type"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/form_storage_label"
-        app:layout_constraintTop_toBottomOf="@+id/form_storage_label" />
+        app:layout_constraintStart_toStartOf="@+id/new_item_label"
+        app:layout_constraintTop_toBottomOf="@+id/new_item_label" />
 
     <TextView
-        android:id="@+id/form_storage_label"
+        android:id="@+id/new_item_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"

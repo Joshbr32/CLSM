@@ -11,34 +11,34 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_item_label"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/form_storage_label"
+        android:id="@+id/new_item_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="100dp"
         android:text="@string/inventory_label"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/inventoryList"
-        app:layout_constraintStart_toStartOf="@+id/inventoryList" />
+        app:layout_constraintStart_toStartOf="@+id/inventoryList"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/add_object_button"
+        android:id="@+id/add_item_button"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="@string/inventory_add_item_button"
-        app:layout_constraintBottom_toBottomOf="@+id/form_storage_label"
+        app:layout_constraintBottom_toBottomOf="@+id/new_item_label"
         app:layout_constraintEnd_toEndOf="@+id/inventoryList"
-        android:onClick="createItem"/>
+        android:onClick="switchToAddItemActivity"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

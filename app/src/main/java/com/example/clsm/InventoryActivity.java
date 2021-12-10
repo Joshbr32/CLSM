@@ -1,5 +1,6 @@
 package com.example.clsm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,6 +15,8 @@ public class InventoryActivity extends AppCompatActivity {
     RecyclerView inventoryList;
     InventoryAdapter inventoryAdapter;
     ArrayList<inventoryObject> inventoryObjects = new ArrayList<>();
+
+
 
 
     public static class inventoryObject extends Forms{
@@ -90,8 +93,15 @@ public class InventoryActivity extends AppCompatActivity {
 
     }
 
+    /*
     public void createItem(View view) {
         inventoryObjects.add(new inventoryObject("Object A", 0, "Test Desc"));
         inventoryAdapter.notifyDataSetChanged();
+    }
+     */
+
+    public void switchToAddItemActivity(View view) {
+        Intent intent= new Intent(this, AddInventoryItem.class);
+        startActivity(intent);
     }
 }

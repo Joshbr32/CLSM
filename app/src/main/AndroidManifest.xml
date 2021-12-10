@@ -18,7 +18,7 @@
         <activity
             android:name=".TimePage" />
         <activity
-            android:name=".WorkSheetActivity"
+            android:name=".WorkOrderActivity"
             android:exported="false" />
         <activity
             android:name=".InventoryActivity"

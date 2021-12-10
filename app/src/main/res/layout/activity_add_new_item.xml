@@ -4,71 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".add_new_item">
+    tools:context=".AddInventoryItem">
+
+    <EditText
+        android:id="@+id/new_item_count_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/new_item_count_label"
+        app:layout_constraintEnd_toEndOf="@+id/add_item_button"
+        app:layout_constraintStart_toEndOf="@+id/new_item_count_label" />
+
+    <EditText
+        android:id="@+id/new_item_description_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/new_item_description_label"
+        app:layout_constraintEnd_toEndOf="@+id/add_item_button"
+        app:layout_constraintStart_toEndOf="@+id/new_item_description_label" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/new_item_description_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Item"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/new_item_description"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/new_item_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/new_item_count_input" />
+
+    <TextView
+        android:id="@+id/new_item_count_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/new_item_count"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/new_item_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/new_item_name_input" />
+
+    <TextView
+        android:id="@+id/new_item_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/new_item_label"
+        android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="31dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_item_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="48dp"
+        android:onClick="createItem"
+        android:text="@string/inventory_add_item_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_item_description_input" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/new_item_name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Item name:"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="72dp" />
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/new_item_name"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/new_item_label"
+        app:layout_constraintTop_toBottomOf="@+id/new_item_label" />
 
     <EditText
-        android:id="@+id/item_name_box"
-        android:layout_width="wrap_content"
+        android:id="@+id/new_item_name_input"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/new_item_box"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        tools:layout_editor_absoluteY="58dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/new_item_name_label"
+        app:layout_constraintEnd_toEndOf="@+id/add_item_button"
+        app:layout_constraintStart_toEndOf="@+id/new_item_name_label" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item count:"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="117dp" />
-
-    <EditText
-        android:id="@+id/item_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        tools:layout_editor_absoluteY="103dp"
-        />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item description"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="172dp" />
-
-    <EditText
-        android:id="@+id/item_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/item_description"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="206dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
