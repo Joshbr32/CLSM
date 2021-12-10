@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +7,25 @@
     tools:context=".MainActivity">
 
     <include
-        android:id="@id/toolbar2"
-        layout = "@layout/toolbar"/>
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_toolbar"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:itemTextColor="@color/purple_500"
+        app:menu="@menu/bottom_toolbar" />
+
+
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="461dp"
@@ -85,71 +102,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/colonial" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="477dp"
-        android:layout_height="169dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="846dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icons8_question_mark_24"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="873dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icons8_clipboard_24"
-            tools:layout_editor_absoluteX="190dp"
-            tools:layout_editor_absoluteY="873dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="23dp"
-            android:layout_height="0dp"
-            app:srcCompat="@drawable/icons8_home_24"
-            tools:layout_editor_absoluteX="270dp"
-            tools:layout_editor_absoluteY="877dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icons8_time_24"
-            tools:layout_editor_absoluteX="423dp"
-            tools:layout_editor_absoluteY="873dp" />
-
-        <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="39dp"
-            android:layout_height="28dp"
-            app:srcCompat="@drawable/icons8_filing_cabinet_50"
-            tools:layout_editor_absoluteX="336dp"
-            tools:layout_editor_absoluteY="891dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="23dp"
-        android:layout_height="0dp"
-        app:srcCompat="@drawable/icons8_home_24"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="877dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icons8_time_24"
-        tools:layout_editor_absoluteX="423dp"
-        tools:layout_editor_absoluteY="873dp" />
 
 
 
@@ -157,4 +109,4 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

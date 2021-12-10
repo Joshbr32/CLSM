@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/stopwatch"
+        android:icon="@drawable/ic_baseline_timer_24"
+        android:title="Stopwatch" />
+
+    <item
+        android:id="@+id/questions"
+        android:icon="@drawable/ic_baseline_question_answer_24"
+        android:title="Questions" />
+
+    <item
+        android:id="@+id/clipboard"
+        android:icon="@drawable/ic_baseline_content_paste_24"
+        android:title="Clipboard" />
+
+    <item
+        android:id="@+id/filing"
+        android:icon="@drawable/ic_baseline_grid_on_24"
+        android:title="Filing" />
+
+
+
+
+
+</menu>
