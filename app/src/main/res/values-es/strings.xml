@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CLSM</string>
 
@@ -18,17 +17,43 @@
     <string name="time_date">Fecha</string>
     <string name="time_name">Nombre</string>
 
+    <string name="time_supervisor">Nombre del supervisor</string>
+
     <!-- Work Order -->
+    <string name="site_list">Lista de sitios</string>
+    <string name="date">Fecha</string>
+    <string name="work_order_time_in">Tiempo en</string>
+    <string name="work_order_time_out">Se acabó el tiempo</string>
+    <string name="comments">Comentarios adicionales</string>
+    <string name="save">Ahorrar</string>
 
     <!-- Sites -->
+    <string name="site_1">Site 1 (placeholder)</string>
+    <string name="site_2">Site 2 (placeholder)</string>
+    <string name="site_3">Site 3 (placeholder)</string>
+    <string name="site_4">Site 4 (placeholder)</string>
+    <string name="site_5">Site 5 (placeholder)</string>
 
     <!-- Tasks -->
+    <string name="task_1">Task 1 (placeholder)</string>
+    <string name="task_2">Task 2 (placeholder)</string>
+    <string name="task_3">Task 3 (placeholder)</string>
+    <string name="task_4">Task 4 (placeholder)</string>
+    <string name="task_5">Task 5 (placeholder)</string>
 
-    <!-- Inventory -->
-
-    <!-- Form Storage -->
 
     <!-- Form Storage Activity -->
+    <string name="formstorage_label">Almacenamiento de formularios</string>
+    <string name="formstorage_select_form_type">Seleccionar tipo de formulario:</string>
+    <string name="formstorage_form_type_worksheet">Hoja de cálculo</string>
+    <string name="formstorage_form_type_timesheet">Hoja de tiempo</string>
 
+    <!-- Inventory -->
+    <string name="inventory_label">Lista de inventario</string>
+    <string name="inventory_add_item_button">Añadir artículo</string>
+
+    <!-- add_new_item -->
+    <string name= "new_item_box"></string>
+    <string name= "item_description"></string>
 
 </resources>
