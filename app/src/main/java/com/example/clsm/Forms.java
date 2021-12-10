@@ -105,14 +105,12 @@ public class Forms {
 
         if (keyList == null) {
             keyList = new ArrayList<String>();
-            Log.i("Forms", "null list");
         }
         if (!keyList.contains(key)) {
             keyList.add(key);
             json = gson.toJson(keyList);
             prefsEditor.putString("keyList", json);
             prefsEditor.commit();
-            Log.i("Forms", "put key " + key);
         }
     }
 }

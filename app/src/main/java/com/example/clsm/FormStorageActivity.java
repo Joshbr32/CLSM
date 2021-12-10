@@ -48,11 +48,7 @@ public class FormStorageActivity extends AppCompatActivity {
 
         for (int i = 0; i < keyList.size(); i++) {
             key = keyList.get(i).toString().split(";");
-            Log.i("Forms", keyList.get(i).toString());
-            Log.i("Forms", key[key.length - 1].toString());
-            Log.i("Forms", key[0].toString());
             dataList = loadForm(keyList.get(i).toString());
-            Log.i("Forms", dataList.get(0).toString());
             form = new Forms(dataList.get(0).toString(), key[key.length - 1].toString(), key[0].toString());
 
             if (Objects.equals(dataList.get(0).toString(), "WorkSheet")) {
