@@ -12,18 +12,18 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="400dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="400dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/timesheet_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="175dp"
+            android:layout_height="87dp"
             android:onClick="timesheet"
             android:text="@string/timesheet_button_text"
             app:layout_column="0"
@@ -31,8 +31,8 @@
 
         <Button
             android:id="@+id/workorder_button"
-            android:layout_width="153dp"
-            android:layout_height="wrap_content"
+            android:layout_width="198dp"
+            android:layout_height="78dp"
             android:onClick="workOrder"
             android:text="@string/workorder_button_text"
             app:layout_column="2"
@@ -40,8 +40,8 @@
 
         <Button
             android:id="@+id/inventory_button"
-            android:layout_width="132dp"
-            android:layout_height="50dp"
+            android:layout_width="175dp"
+            android:layout_height="75dp"
             android:onClick="inventory"
             android:text="@string/inventory_button_text"
             app:layout_column="0"
@@ -49,8 +49,8 @@
 
         <Button
             android:id="@+id/form_storage_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="193dp"
+            android:layout_height="76dp"
             android:onClick="formStorage"
             android:text="@string/formstorage_button_text"
             app:layout_column="2"
@@ -65,7 +65,7 @@
         android:id="@+id/colonial_logo_main_menu"
         android:layout_width="385dp"
         android:layout_height="192dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="108dp"
         android:layout_marginTop="44dp"
         android:contentDescription="TODO"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,53 +74,53 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
+        android:layout_width="649dp"
+        android:layout_height="56dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="725dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icons8_question_mark_24"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="725dp" />
+        tools:layout_editor_absoluteX="-29dp"
+        tools:layout_editor_absoluteY="763dp" />
 
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/icons8_clipboard_24"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="727dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icons8_home_24"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="727dp" />
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="764dp" />
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/icons8_time_24"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="726dp" />
+        tools:layout_editor_absoluteX="407dp"
+        tools:layout_editor_absoluteY="764dp" />
 
     <ImageButton
         android:id="@+id/imageButton8"
         android:layout_width="39dp"
         android:layout_height="28dp"
         app:srcCompat="@drawable/icons8_filing_cabinet_50"
-        tools:layout_editor_absoluteX="238dp"
-        tools:layout_editor_absoluteY="735dp" />
+        tools:layout_editor_absoluteX="341dp"
+        tools:layout_editor_absoluteY="773dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icons8_home_24"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="764dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icons8_question_mark_24"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="763dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
