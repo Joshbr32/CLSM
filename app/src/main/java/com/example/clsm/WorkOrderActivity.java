@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class WorkOrderActivity extends AppCompatActivity {
     ArrayList<WorkOrder> workOrders;
     WorkOrder workOrder;
     Button saveButton;
+    ProgressBar saveBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class WorkOrderActivity extends AppCompatActivity {
         commentsField = findViewById(R.id.commentsField);
         taskList = findViewById(R.id.taskList);
         saveButton = findViewById(R.id.saveButton);
+        saveBar = findViewById(R.id.saveBar);
 
         // Populate site spinner
         String[] sites = new String[]{getResources().getString(R.string.site_1), getResources().getString(R.string.site_2), getResources().getString(R.string.site_3), getResources().getString(R.string.site_4), getResources().getString(R.string.site_5)};
@@ -56,10 +59,12 @@ public class WorkOrderActivity extends AppCompatActivity {
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                saveBar.setVisibility(View.VISIBLE);
                 SaveData sd = new SaveData();
                 sd.execute();
             }
         });
+
     }
 
     public class WorkOrder extends Forms {
@@ -68,36 +73,54 @@ public class WorkOrderActivity extends AppCompatActivity {
         }
     }
 
-    private class SaveData extends AsyncTask<Void, Void, Void> {
+    private class SaveData extends AsyncTask<String, Integer, String> {
         String completedTasks;
         ArrayList<String> dataList;
 
         @Override
-        protected Void doInBackground(Void... voids) {
+        protected String doInBackground(String... strings) {
             // Get checked task items
             completedTasks = "";
+            publishProgress(25);
             for (int i = 0; i < taskList.getCount(); i++) {
                 if (taskList.isItemChecked(i)) {
                     completedTasks += taskList.getItemAtPosition(i).toString() + ";";
                 }
             }
+            publishProgress(50);
 
             // Update workOrder
             dataList = new ArrayList<String>();
 
             workOrder.setMainIdentifier(siteSpinner.getSelectedItem().toString());
             workOrder.setDate(dateField.getText().toString());
-            dataList.add("workOrder");
+            dataList.add("WorkSheet");
             dataList.add(timeInField.getText().toString());
             dataList.add(timeOutField.getText().toString());
             dataList.add(completedTasks);
             dataList.add(commentsField.getText().toString());
             workOrder.setDataList(dataList);
+            publishProgress(75);
 
             // Save data
             workOrder.saveData();
+            publishProgress(100);
 
             return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... value) {
+            super.onProgressUpdate(value);
+            if (saveBar != null) {
+                saveBar.setProgress(value[0]);
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            saveBar.setVisibility(View.INVISIBLE);
         }
     }
 }

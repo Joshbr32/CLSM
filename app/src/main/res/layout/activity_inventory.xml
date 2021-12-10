@@ -7,32 +7,38 @@
     tools:context=".InventoryActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inventoryList"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_item_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/new_item_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/inventory_label"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inventoryList"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/colonial_logo"
+    <Button
+        android:id="@+id/add_item_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/colonial"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="41dp" />
+        android:layout_height="50dp"
+        android:text="@string/inventory_add_item_button"
+        app:layout_constraintBottom_toBottomOf="@+id/new_item_label"
+        app:layout_constraintEnd_toEndOf="@+id/inventoryList"
+        android:onClick="switchToAddItemActivity"/>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/inventory_button_text"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="147dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

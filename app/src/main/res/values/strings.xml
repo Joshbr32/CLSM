@@ -9,11 +9,20 @@
     <string name="formstorage_button_text">Form Storage</string>
     <string name="qoute_button_text">Quotes</string>
 
+    <!-- Time Sheet -->
+    <string name="time_clear">VIEW LOG</string>
+    <string name="time_save">SAVE</string>
+    <string name="time_sheet_time_in">Time In</string>
+    <string name="time_sheet_time_out">Time Out</string>
+    <string name="time_date">Date</string>
+    <string name="time_name">Employee Name</string>
+    <string name="time_supervisor">Supervisor Name</string>
+
     <!-- Work Order -->
     <string name="site_list">List of sites</string>
     <string name="date">Date</string>
-    <string name="time_in">Time in</string>
-    <string name="time_out">Time out</string>
+    <string name="work_order_time_in">Time in</string>
+    <string name="work_order_time_out">Time out</string>
     <string name="comments">Additional comments</string>
     <string name="save">Save</string>
 
@@ -30,5 +39,21 @@
     <string name="task_3">Task 3 (placeholder)</string>
     <string name="task_4">Task 4 (placeholder)</string>
     <string name="task_5">Task 5 (placeholder)</string>
+
+
+    <!-- Form Storage Activity -->
+    <string name="formstorage_label">Form Storage</string>
+    <string name="formstorage_select_form_type">Select Form Type:</string>
+    <string name="formstorage_form_type_worksheet">Work Sheet</string>
+    <string name="formstorage_form_type_timesheet">Time Sheet</string>
+
+    <!-- Inventory -->
+    <string name="inventory_label">Inventory List</string>
+    <string name="inventory_add_item_button">Add Item</string>
+    <string name="new_item_description">Item Description:</string>
+    <string name="new_item_count">Item Count:</string>
+    <string name="new_item_label">Add New Item</string>
+    <string name="new_item_name">Item Name:</string>
+
 
 </resources>

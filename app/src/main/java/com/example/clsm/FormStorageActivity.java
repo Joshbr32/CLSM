@@ -48,16 +48,30 @@ public class FormStorageActivity extends AppCompatActivity {
 
         for (int i = 0; i < keyList.size(); i++) {
             key = keyList.get(i).toString().split(";");
-            dataList = loadForm(keyList.get(i).toString());
-            form = new Forms(dataList.get(0).toString(), key[key.length - 1].toString(), key[0].toString());
+            if (key.length > 1) {
+                dataList = loadForm(keyList.get(i).toString());
+                if (dataList == null) {
+                    continue;
+                } else {
+                    if (dataList.size() == 0) {
+                        continue;
+                    }
+                }
+                    Log.i("testsss", dataList.get(0).toString());
+                    if (Objects.equals(dataList.get(0).toString(), "WorkSheet") || Objects.equals(dataList.get(0).toString(), "TimeSheet")) {
+                        form = new Forms(dataList.get(0).toString(), key[key.length - 1].toString(), key[0].toString());
+                        form.setDataList(dataList);
 
-            if (Objects.equals(dataList.get(0).toString(), "WorkSheet")) {
-                worksheets.add(form);
-            } else if (Objects.equals(dataList.get(0).toString(), "TimeSheet")) {
-                timesheets.add(form);
+                        if (Objects.equals(dataList.get(0).toString(), "WorkSheet")) {
+                            worksheets.add(form);
+                            formSheets.add(form);
+                        } else if (Objects.equals(dataList.get(0).toString(), "TimeSheet")) {
+                            timesheets.add(form);
+                            formSheets.add(form);
+                        }
+                    }
+
             }
-            formSheets.add(form);
-
         }
         //
     }

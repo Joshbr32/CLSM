@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,13 +32,9 @@ public class TimeSheetActivity extends AppCompatActivity {
         save = findViewById(R.id.time_save);
         page = findViewById(R.id.time_clear);
 
-        sharedPreferences = getSharedPreferences("preference", Context.MODE_PRIVATE);
-
-
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 // create new TimeSheet from class
                 n1 = name.getText().toString();
                 t1 = timeIn.getText().toString();
@@ -48,8 +45,6 @@ public class TimeSheetActivity extends AppCompatActivity {
                 saveForm();
 
                 Toast.makeText(TimeSheetActivity.this, "Time Successfully Logged!", Toast.LENGTH_LONG).show();
-
-
             }
         });
         page.setOnClickListener(new View.OnClickListener() {
